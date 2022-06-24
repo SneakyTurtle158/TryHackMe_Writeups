@@ -95,10 +95,15 @@ Now let's open up a terminal in the directory where we have that fsocity.dic and
 #### For those who aren't familiar with hydra, let me explain the syntax of this command. Hydra is a great bruteforcing tool that can be used to bruteforce a variety of different protocols. Here we are using it to brute force the login page to try to get a correct username with the fsocity.dic file. The parameters are:
 
 `-L fsocity.dic` : Capital L is used for the username (capitalized means we are using a list)
+
 `-p test` : Lowercase p means we are supplying 1 password (test) for all login attempts made
+
 `mrrobot http-post-form` : this points to the mrrobot address and lets hydra know we are using an HTTP POST request
+
 `"/wp-login/` : this tells hydra the directory that the login page is at
+
 `log=^USER^&pwd=^PASS^&wp-submit=Log+In&redirect_to=http%3A%2F%2Fmrrobot%2Fwp-admin%2F&testcookie=1` : This should be familiar, this is the Request Body that we found earlier, we replaced the admin and password targets with ^USER^ and ^PASS^ to let hydra know where to use the supplied -L and -p input.
+
 `:Invalid username."` : This is to let hydra know to ignore any reponses that include this text. This means that any incorrect user name attempts will be dropped and hydra will only show us results that did not reult in the “Invalid username” error.
 
 <p align="center">
