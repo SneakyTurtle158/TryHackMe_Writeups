@@ -80,7 +80,7 @@ First let's take a look at the request that is being made when we try to log in,
   <img src="https://github.com/SneakyTurtle158/TryHackMe_Writeups/blob/pictures/mrrobot/10.png">
 </p>
 
-We want to right-click the POST and select Edit and Resend then on the right side scroll down to the request body to see what the request syntax is, you will need this for the brute force attack.
+We want to right-click the POST and select _Edit and Resend_ then on the right side scroll down to the request body to see what the request syntax is, you will need this for the brute force attack.
 
 <p align="center">
   <img src="https://github.com/SneakyTurtle158/TryHackMe_Writeups/blob/pictures/mrrobot/11.png">
