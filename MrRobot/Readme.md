@@ -134,7 +134,7 @@ Alright, we've got the admin dashboard, which if you aren't already aware WP adm
   <img src="https://github.com/SneakyTurtle158/TryHackMe_Writeups/blob/pictures/mrrobot/17.png">
 </p>
 
-Under the 404.php template I will upload a php reverse shell that I got from pentestmonkey.
+Under the 404.php template I will upload a php reverse shell that I got from [pentestmonkey](https://github.com/pentestmonkey/php-reverse-shell).
 
 <p align="center">
   <img src="https://github.com/SneakyTurtle158/TryHackMe_Writeups/blob/pictures/mrrobot/18.png">
