@@ -61,7 +61,7 @@ Let's see what we can find using wpscan (I always recommend getting wpscan's fre
   <img src="https://github.com/SneakyTurtle158/TryHackMe_Writeups/blob/pictures/mrrobot/7.png">
 </p>
 
-In hinesite this ended up pulling a lot of information in, some useful some not. Rather than parsing through all of the reults, we can see that the WP version that is in use is outdated and we know that we located a dictionary file, so let's look at a common WP login vulnerability to see if we can brute force our way in.
+In hinesite this ended up pulling a lot of information in, some useful some not. Rather than parsing through all of the results, we can see that the WP version that is in use is outdated and we know that we located a dictionary file, so let's look at a common WP login vulnerability to see if we can brute force our way in.
 
 We will start by using admin:password to see what happens:
 
