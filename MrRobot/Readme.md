@@ -188,7 +188,7 @@ Bingo, looks like we have a SUID bit set on nmap:
   <img src="https://github.com/SneakyTurtle158/TryHackMe_Writeups/blob/pictures/mrrobot/25.png">
 </p>
 
-If you haven't already, bookmark [GTFObins](https://gtfobins.github.io/). It is your best friend when it comes to privesc.
+_If you haven't already, bookmark [GTFObins](https://gtfobins.github.io/). It is your best friend when it comes to privesc._
 
 Searching for nmap+SUID on GTFObins gives us our way to get root:
 
