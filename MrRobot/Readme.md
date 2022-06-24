@@ -196,4 +196,4 @@ Searching for nmap+SUID on GTFObins gives us our way to get root:
   <img src="https://github.com/SneakyTurtle158/TryHackMe_Writeups/blob/pictures/mrrobot/26.png">
 </p>
 
-_And that's it, thanks for following along!_
+## _And that's it, thanks for following along!_
