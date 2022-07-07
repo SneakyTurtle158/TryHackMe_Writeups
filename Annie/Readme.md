@@ -17,7 +17,7 @@ chmod +x threader3000.py
 ./threader3000.py
 ```
 
-So I ran threader3000 and then did its the suggested nmap scan to get some more info:
+So I ran threader3000 and then did the suggested nmap scan to get some more info:
 
 ```bash
 ------------------------------------------------------------
