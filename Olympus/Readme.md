@@ -3,6 +3,8 @@
 ## Room Creator: G4vr0ch3
 [Olympus](https://tryhackme.com/room/olympusroom)
 
+_**Disclaimer:** I've done my best in this walkthrough to not give away too much, as you progress through the walkthrough more information will inherently be available to you. This is a great room to learn and practice a lot of different skills so my recommendation to you is not to jump ahead. Take your time and learn each step!_
+
 Let's kick this off with a quick nmap scan to see what we are working with:
 `nmap -T4 -A -p- IPADDRESS`
 
@@ -88,9 +90,9 @@ After poking around for a while (longer than I'd like to admit) I just tried put
   <img src="https://github.com/SneakyTurtle158/TryHackMe_Writeups/blob/pictures/olympus_pics/12.png">
 </p>
 
-Ok so we have access to a chat app and it looks like there is some good info in there. This brings me back to the gobusting I did on the chat.olympu.thm domain earlier when I couldn't figure out how to login (which I thought was useless at the time.) Turns out I found a directory that I had access to, but provided an empty page (/uploads). However, it looks like the chat is telling us that the file names get changed when they are uploaded...
+Ok so we have access to a chat app and it looks like there is some good info in there. This brings me back to the gobusting I did on the chat.olympus.thm domain earlier when I couldn't figure out how to login (which I thought was useless at the time.) Turns out I found a directory that I had access to, but provided an empty page (/uploads). However, it looks like the chat is telling us that the file names get changed when they are uploaded...
 
-So first thing's first, let's get a php shell uploaded so that we can try to find it and get a reverse shell. I use the pentestmonkey LINK reverse shell (make sure you change the IP address) and then I uploaded it to the chat:
+So first thing's first, let's get a php shell uploaded so that we can try to find it and get a reverse shell. I use the [pentestmonkey](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php) reverse shell (make sure you change the IP address and port) and then I uploaded it to the chat:
 <p align="center">
   <img src="https://github.com/SneakyTurtle158/TryHackMe_Writeups/blob/pictures/olympus_pics/13.png">
 </p>
@@ -163,7 +165,7 @@ At this point I tried a lot of different priv escalation techniques and even res
  
  `find / -group adm 2>/dev/null`
  
- As you woudl expect, the adm group gave me access to a bunch of log files. I searched around for a while to see if any of the logs captured a usable password but no such luck.
+ As you would expect, the adm group gave me access to a bunch of log files. I searched around for a while to see if any of the logs captured a usable password but no such luck.
  
  Next I checked the zeus group to see what else I had access to:
  
@@ -201,7 +203,7 @@ Looks like a backdoor! Remember the note from Prometheus? Looks like this might 
   <img src="https://github.com/SneakyTurtle158/TryHackMe_Writeups/blob/pictures/olympus_pics/29.png">
 </p>
 
-Then navigate to: http://REDACTED.olympus.thm:7890/REDACTED.php?ip=10.13.40.163&port=8899
+Then navigate to: http://chat.olympus.thm:7890/VIGQFQFMYOST.php?ip=10.13.40.163&port=8899
 
 _And we've got root!_
 <p align="center">
